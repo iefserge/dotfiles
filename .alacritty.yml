@@ -1,0 +1,79 @@
+env:
+  TERM: xterm-256color
+
+window:
+  decorations: full
+  title: Terminal
+
+font:
+  size: 16.0
+  normal:
+    family: SF Mono
+    style: Light
+  bold:
+    style: Bold
+  offset:
+    x: -1
+    y: 0
+  use_thin_strokes: true
+
+# Colors (desert night)
+colors:
+  # Default colors
+  primary:
+    background: "0x24221c"
+    foreground: "0xd4b07b"
+
+  # Normal colors
+  normal:
+    black: "0x473f31"
+    red: "0xe56b55"
+    green: "0x99b05f"
+    yellow: "0xe18245"
+    blue: "0x949fb4"
+    magenta: "0xd261a5"
+    cyan: "0xbfab36"
+    white: "0x87765d"
+
+  # Bright colors
+  bright:
+    black: "0x473f31"
+    red: "0xe56b55"
+    green: "0x99b05f"
+    yellow: "0xe5a440"
+    blue: "0x949fb4"
+    magenta: "0xd261a5"
+    cyan: "0xbfab36"
+    white: "0x87765d"
+
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "source ~/.zshrc; tmux attach 2> /dev/null || tmux"
+
+key_bindings:
+  - { key: D,     mods: Command,       chars: "\x06\x76" }
+  - { key: D,     mods: Command|Shift, chars: "\x06\x73" }
+  - { key: W,     mods: Command,       chars: "\x06\x78" }
+  - { key: H,     mods: Command,       chars: "\x06\x68" }
+  - { key: J,     mods: Command,       chars: "\x06\x6a" }
+  - { key: K,     mods: Command,       chars: "\x06\x6b" }
+  - { key: L,     mods: Command,       chars: "\x06\x6c" }
+  - { key: T,     mods: Command,       chars: "\x06\x63" }
+  - { key: Key0,  mods: Command,       chars: "\x06\x30" }
+  - { key: Key1,  mods: Command,       chars: "\x06\x31" }
+  - { key: Key2,  mods: Command,       chars: "\x06\x32" }
+  - { key: Key3,  mods: Command,       chars: "\x06\x33" }
+  - { key: Key4,  mods: Command,       chars: "\x06\x34" }
+  - { key: Key5,  mods: Command,       chars: "\x06\x35" }
+  - { key: Key6,  mods: Command,       chars: "\x06\x36" }
+  - { key: Key7,  mods: Command,       chars: "\x06\x37" }
+  - { key: Key8,  mods: Command,       chars: "\x06\x38" }
+  - { key: Key9,  mods: Command,       chars: "\x06\x39" }
+  - { key: Left,  mods: Command,       chars: "\x06\x48" }
+  - { key: Down,  mods: Command,       chars: "\x06\x4a" }
+  - { key: Up,    mods: Command,       chars: "\x06\x4b" }
+  - { key: Right, mods: Command,       chars: "\x06\x4c" }
+  - { key: K,     mods: Command,       chars: "\x0b" } # Ctrl + E
